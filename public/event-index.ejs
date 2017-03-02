@@ -1,0 +1,13 @@
+<h2>Events</h2>
+
+<div class="postlist events">
+    <% for (let slug in public.events._data){ %>
+    <div class="post">
+        <h3><a href="events/<%= slug %>.html"><%= public.events._data[slug].name %></a></h3>
+        <div class="undertitle">
+            <span class="date"><%= public.events._data[slug].date %></span>
+            <span class="location"><%= public.events._data[slug].location %></span>
+        </div>
+    </div>
+    <% }; %>
+</div>

@@ -1,0 +1,42 @@
+
+<%
+    const courses = public.courses._data;
+%>
+
+<div id="accordion" class="panel-group">
+
+    <%
+        for ( course in courses ) {
+            let code = course;
+            let title = courses[course].name;
+    %>
+
+                <div class="panel panel-default">
+
+                    <div class="panel-heading">
+
+                        <h4 class="panel-title">
+
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapse<%- code %>"><%- title %></a>
+
+                        </h4>
+
+                    </div>
+
+                    <div id="collapse<%- code %>" class="panel-collapse collapse">
+
+                        <div class="panel-body">
+
+                            <%- partial("courses/" + code) %>
+
+                        </div>
+
+                    </div>
+
+                </div>
+    <%
+        }
+    %>
+
+</div>
+

@@ -1,0 +1,23 @@
+{
+  "index": {
+    "pageTitle": "Home"
+  },
+  "minor": {
+    "pageTitle": "The Minor"
+  },
+  "resources": {
+    "pageTitle": "Resources"
+  },
+  "blog": {
+    "pageTitle": "News"
+  },
+  "404": {
+    "pageTitle": "Page Not Found"
+  },
+  "event-index": {
+    "pageTitle": "Events"
+  },
+  "contact": {
+    "pageTitle": "Contact"
+  }
+}

@@ -1,0 +1,62 @@
+<%
+var allTags = [];
+for (var slug in public.posts._data) {
+    var postTags=public.posts._data[slug].tags.split(',');
+    allTags = allTags.concat(postTags);
+}
+uniqueTags = allTags.filter(function(item, pos) {
+    return allTags.indexOf(item) == pos;
+});
+uniqueTags.sort();
+
+var counts = {};
+
+for (var i = 0; i< allTags.length; i++) {
+    var tag = allTags[i];
+    counts[tag] = counts[tag] ? counts[tag]+1 : 1;
+}
+%>
+
+<div class="row marketing">
+
+<div class="blog-index-side col-lg-3">
+    <h2>Tags</h2>
+    <p class="taglist">
+
+        <% for (i=0; i < uniqueTags.length; i++) { %>
+
+        <span class="tag" onclick='filterTag("<%= uniqueTags[i] %>")'><%= uniqueTags[i] %></span>(<%= counts[uniqueTags[i]] %>)
+
+        <% }; %>
+
+    </p>
+</div>
+
+<% function excerpt(content) {
+    if(content.indexOf("<!-- more -->") == -1) return content;
+    else return content.split("<!-- more -->")[0];
+} %>
+
+<div class="blog-index-main col-lg-9">
+    <h2>Posts</h2>
+    <div class="postlist">
+        <% for (var slug in public.posts._data){ %>
+        <div class="post", data-tags="<%= public.posts._data[slug].tags %>">
+            <h3><a href="posts/<%= slug %>.html"><%= public.posts._data[slug].title %></a></h3>
+            <div class="undertitle">
+                <span class="date"><%= public.posts._data[slug].date %></span>
+                <% var tags = public.posts._data[slug].tags.split(",");
+                for (var i = 0; i < tags.length; i++) { %>
+                <span class = "tag" onclick='filterTag("<%= tags[i] %>")'><%= tags[i] %></span>
+                <% }; %>
+                <div class="post-excerpt">
+                    <%- excerpt(partial("posts/" + slug)) %>
+                    <span><a class="blog-link" href="posts/<%= slug %>.html">Read More &hellip;</a></span>
+                </div>
+            </div>
+        </div>
+        <% }; %>
+    </div>
+</div>
+
+</div>

@@ -1,0 +1,34 @@
+{
+  "csc115": {
+    "pageTitle": "CSC 115",
+    "name":  "CSC 115 Computer Science I"
+  },
+  "csc215": {
+    "pageTitle": "CSC 215",
+    "name":  "CSC 215 Computer Science II"
+  },
+  "csc303": {
+    "pageTitle": "CSC 303",
+    "name":  "CSC 303 Fundamentals of Data Computing"
+  },
+  "csc323": {
+    "pageTitle": "CSC 323",
+    "name":  "CSC 323 Web Design"
+  },
+  "csc324": {
+    "pageTitle": "CSC 324",
+    "name": "CSC 324 Web Programming"
+  },
+  "csc405": {
+    "pageTitle": "CSC 405",
+    "name": "CSC 405 Databases"
+  },
+  "csc460": {
+    "pageTitle": "CSC 460",
+    "name": "CSC 460 Internship"
+  },
+  "csc470": {
+    "pageTitle": "CSC 470",
+    "name": "CSC 470 Topics"
+  }
+}

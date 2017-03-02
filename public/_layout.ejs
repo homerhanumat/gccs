@@ -1,0 +1,59 @@
+<%
+    const quotes = public.quotes._data;
+    function getRandomInt(min, max) {
+        min = Math.ceil(min);
+        max = Math.floor(max);
+        return Math.floor(Math.random() * (max - min)) + min;
+    }
+    let randomIndex = getRandomInt(0, quotes.length - 1);
+    let quote = quotes[randomIndex].quote;
+    let author = quotes[randomIndex].author;
+%>
+
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+
+<%- partial("partial/_head") %>
+
+
+<body>
+    <%- partial("partial/_header") %>
+    <div class="container">
+        <div class="jumbotron">
+            <h1>GC Computer Science</h1>
+            <p class="lead">Train your mind, create your career.</p>
+            <p><a class="btn btn-lg btn-success" href="http://www.georgetowncollege.edu/admissions/#/home" role="button">Apply</a></p>
+        </div>
+
+        <% if ( current.path.includes("posts") ) { %>
+        <h2 class="blog-title"><%- title %></h2>
+        <p class="blog-subtitle"><%- date %></p>
+        <% } %>
+
+        <% if ( current.path.includes("courses") ) { %>
+        <h2><%- name %></h2>
+        <% } %>
+
+        <% if ( current.path.includes("events") ) { %>
+        <h2 class="blog-title"><%- name %></h2>
+        <% let place = location ? ", " + location : "" %>
+        <p class="blog-subtitle"><%- date %><%- place %></p>
+        <% } %>
+
+        <%- yield %>
+
+        <div class="quotation">
+            <h2>Random Programming Quote</h2>
+            <blockquote>
+                <%- quote %>
+                <br>
+                <span class="quote-author">&mdash; <em><%- author %></em></span>
+            </blockquote>
+        </div>
+    </div>
+</body>
+
+<%- partial("partial/_footer") %>
+<%- partial("partial/_scripts") %>
+
+</html>
