@@ -19,5 +19,8 @@
   },
   "contact": {
     "pageTitle": "Contact"
+  },
+  "faq": {
+    "pageTitle": "FAQ"
   }
 }
