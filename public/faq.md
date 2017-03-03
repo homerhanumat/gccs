@@ -56,9 +56,17 @@ But you can use the minor **now**, as a student.  Everyone in the minor creates 
 and/or a blog.  If you enjoy your humanities major, why not use the blog to write about
 discipline and to build community with other like-minded folks?
 
-### I'm gonna major in math, physics or engineering, and I want to learn Computer Science to support my major.
+### *I'm gonna major in math, physics or engineering, and I want to learn Computer Science to support my major.*
 
 Well, that's fine:  if you are determined to minor in Computer Science we
 won't stop you.  But consider taking a minor in another field, one that will broaden your
 perspective.  The Math major had plenty of computing opportunities, and you can
 always take one or two extra Compute Science courses, just for fun.
+
+### *What if I'm only interested in part of the minor?*
+
+This can happen.  For example, if you are in a Business or science major you might be interested
+mostly in the Data Analysis element of the minor.  In that case, you should take just
+CSC 115, CSC 215 and CSC 303.  On the other hand if you are primarily interested in Web
+Design, then take CSC 115, CSC 216, CSC 323 (or ART 323) and CSC 324.  The Art Department
+may offer some other web-related courses, too.

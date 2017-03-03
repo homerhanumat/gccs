@@ -21,8 +21,8 @@
     <div class="container">
         <div class="jumbotron">
             <h1>GC Computer Science</h1>
-            <p class="lead">Train your mind, create your career.</p>
-            <p><a class="btn btn-lg btn-success" href="http://www.georgetowncollege.edu/admissions/#/home" role="button">Apply</a></p>
+            <p class="lead <%- current.source %>">Train your mind, create your career.</p>
+            <p><a class="btn btn-lg btn-success <%- current.source %>" href="http://www.georgetowncollege.edu/admissions/#/home" role="button">Apply</a></p>
         </div>
 
         <% if ( current.path.includes("posts") ) { %>
