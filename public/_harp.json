@@ -1,7 +1,9 @@
 {
   "globals": {
     "siteTitle": "Georgetown College Computer Science",
-    "emailContact": "hwhite0@georgetowncollege.edu"
+    "emailContact": "hwhite0@georgetowncollege.edu",
+    "postListLimit": 3,
+    "upcomingEventLimit": 100
   }
 
 }

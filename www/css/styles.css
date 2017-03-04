@@ -1,5 +1,4 @@
-/* Sticky footer styles
--------------------------------------------------- */
+
 html {
     position: relative;
     min-height: 100%;
@@ -125,6 +124,23 @@ nav.navbar-fixed-top .container a.active {
 .jumbotron p a.index {
     opacity: 0;
     animation: FadeIn 3s ease 4s 1 normal forwards;
+}
+
+aside {
+    background-color: #aaffff;
+    border: solid 3px black;
+    padding: 10px;
+}
+
+aside ul {
+    list-style: none;
+    margin-left: 0;
+    padding: 0 10px 10px 10px;
+}
+
+aside h3 {
+    text-align: center;
+    margin-top: 0;
 }
 
 img {
