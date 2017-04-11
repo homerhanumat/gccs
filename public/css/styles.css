@@ -139,6 +139,10 @@ aside ul {
     padding: 0 10px 10px 10px;
 }
 
+aside li {
+    padding-bottom: 10px;
+}
+
 aside h3 {
     text-align: center;
     margin-top: 0;
