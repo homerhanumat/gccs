@@ -17,7 +17,7 @@ come in handy in a wide variety of future endeavours.
 
 Honestly, no, the minor doesn't provide enough technical background for that.  On the
 other hand, some of the top software developers in the world did not major in Computer
-Science: instead they studied thing that interested them at the time--art, music,
+Science: instead they studied things that interested them at the time--art, music,
 literature, political science, etc.  Some of them moved gradually into programming as they
 saw how much these fields now depend upon it.  Others joined technical firms in a non-technical
 capacity and gradually got drawn in by the fascination of computing.
@@ -32,7 +32,7 @@ R, the first language we teach in this course.
 If you are part of the Science Honors program at Georgetown then you will do a summer of
 undergraduate research.  The two top "side-skills" for your research experience tend to be
 statistics and computer programming.  If you take our minor then you won't be afraid
-to tackel these activities in your summer of research.
+to tackle these activities in your summer of research.
 
 ### *I'm a social science major.  What will Computer Science do for me?*
 
@@ -45,10 +45,10 @@ graduate school.
 If you major in English, Religion, History or Philosophy you probably won't end up
 working professionally in your major field.  You'll take jobs with organizations that
 value the critical thinking skills and the broad perspective you picked up 
-in your major--or you might start your own small business.
+in your major---or you might start your own small business.
 
 But whatever you do, it's highly likely that you'll have the opportunity to analyze data.
-Or perhaps you'll want to put a website to get the word out about your business, a conference
+Or perhaps you'll want to put up a website to get the word out about your business, a conference
 you are organizing, or to promote the work of your favorite charity or non-profit.  This
 minor will give you the skills to take on such challenges.
 
@@ -60,7 +60,7 @@ discipline and to build community with other like-minded folks?
 
 Well, that's fine:  if you are determined to minor in Computer Science we
 won't stop you.  But consider taking a minor in another field, one that will broaden your
-perspective.  The Math major had plenty of computing opportunities, and you can
+perspective.  The Math major has plenty of computing opportunities, and you can
 always take one or two extra Compute Science courses, just for fun.
 
 ### *What if I'm only interested in part of the minor?*
