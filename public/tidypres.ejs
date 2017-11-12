@@ -36,6 +36,51 @@
     </table>
 </div>
 
+<h3>Recent Princes</h3>
+
+<p>The following table gives counts of the number of babies born with the name
+"Prince", for each sex and each year since 1978.  (If in a given
+year fewer than five children of a given sex have that name,
+no count is provided.)</p>
+
+<%
+    let princes = RecentPrinces;
+    let keyNames = Object.keys(princes);
+    let nRows = princes[keyNames[0]].length;
+%>
 
 
+<div class="table-responsive">
+    <table class="table table-hover table-bordered">
+        <tr>
+            <%
+            for ( let i in keyNames ) {
+            %>
+            <th><%- keyNames[i] %></th>
+            <% } %>
+            <%
+            for ( let i = 0; i < nRows; i++ ) {
+            %>
+        <tr>
 
+            <%      for ( let j in keyNames ) {
+            %>
+            <td><%- princes[keyNames[j]][i] %></td>
+            <%     } %>
+        </tr>
+        <% } %>
+        </tr>
+    </table>
+</div>
+
+
+<h3>Recent Taylors</h3>
+
+<p>The following table gives counts of the number of babies born with the name
+    "Taylor", for each sex and each year since 1995.</p>
+
+<div class="table-responsive">
+    <table id="recent-taylors" class="table table-hover table-bordered">
+
+    </table>
+</div>

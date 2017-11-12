@@ -63,7 +63,6 @@ function randomQuotes() {
         return Math.floor(Math.random() * (max - min)) + min;
     }
 
-    //development
     var url = "data/quotes.json";
 
     // define the callback:
@@ -120,3 +119,163 @@ function randomQuotes() {
 }
 
 window.addEventListener('load', randomQuotes);
+
+/***********************************************************
+ *
+ * Add table to tidypres.html
+ *
+ ***********************************************************/
+
+function fillTable(table, data) {
+
+    var names = Object.keys(data);
+    var innerMaterial = "";
+    var headRow = "<tr>";
+    names.forEach(function (name) {
+        headRow += "<th>" + name + "</th>";
+    });
+    headRow += "</tr>";
+    innerMaterial = headRow;
+
+    var nrows = data[names[0]].length;
+
+    var _loop = function _loop(j) {
+        var row = "<tr>";
+        names.forEach(function (name) {
+            row += "<td>" + data[name][j] + "</td>";
+        });
+        row += "</tr>";
+        innerMaterial += row;
+    };
+
+    for (var j = 0; j < nrows; j++) {
+        _loop(j);
+    }
+    table.innerHTML = innerMaterial;
+}
+
+function recentTaylors() {
+
+    var url = "data/RecentTaylors.json";
+
+    // define the callback:
+    function callback(response, error) {
+        if (response !== null) {
+            processData(response);
+        } else {
+            console.log(error);
+        }
+    }
+
+    // handling the response text
+    function processData(json) {
+        var taylors = JSON.parse(json);
+        var table = document.querySelector("#recent-taylors");
+        var quoteText = document.createElement("p");
+        fillTable(table, taylors);
+    }
+
+    //set it up
+    var req = new XMLHttpRequest();
+    req.open("GET", url, true);
+    // timeout after 30 seconds:
+    req.timeout = 30000;
+    req.ontimeout = function () {
+        console.log("Request timed out.");
+    };
+
+    // handle response to request:
+    req.addEventListener("load", function () {
+        if (req.status < 400) {
+            callback(req.responseText);
+        } else {
+            callback(null, new Error(req.status + ":  " + req.statusText));
+        }
+    });
+
+    // if we never get off the ground:
+    req.addEventListener("error", function () {
+        callback(null, new Error("Network error"));
+    });
+
+    // Now send it:
+    req.send();
+}
+
+window.addEventListener('load', recentTaylors);
+
+/***********************************************************
+ *
+ * Add links to rpubs.html
+ *
+ ***********************************************************/
+
+function linkList(div, data) {
+
+    var inner = "";
+    var articleCount = data.title.length;
+
+    for (var i = 0; i < articleCount; i++) {
+        inner += "<div class=\'post-title\'>";
+        inner += "<a class='title-anchor' href='";
+        inner += data.url[i];
+        inner += "' target='_blank'><strong>" + data.title[i];
+        inner += "</strong></a><br><span class='author-date'>";
+        inner += "<a class='author-anchor' href='http://rpubs.com/";
+        inner += data.username[i] + "' target='_blank'>";
+        inner += data.author[i] + "</a>, ";
+        inner += data.articleDate[i] + "</span><br><p>";
+        inner += data.description[i] + "</p>\n</div>";
+    }
+
+    div.innerHTML = inner;
+}
+
+function getRPubs() {
+
+    var url = "http://localhost:8000/rpubs";
+
+    // define the callback:
+    function callback(response, error) {
+        if (response !== null) {
+            processData(response);
+        } else {
+            console.log(error);
+        }
+    }
+
+    // handling the response text
+    function processData(json) {
+        var articles = JSON.parse(json);
+        var list = document.querySelector("#rpubs-articles");
+        linkList(list, articles);
+    }
+
+    //set it up
+    var req = new XMLHttpRequest();
+    req.open("GET", url, true);
+    // timeout after 30 seconds:
+    req.timeout = 30000;
+    req.ontimeout = function () {
+        console.log("Request timed out.");
+    };
+
+    // handle response to request:
+    req.addEventListener("load", function () {
+        if (req.status < 400) {
+            callback(req.responseText);
+        } else {
+            callback(null, new Error(req.status + ":  " + req.statusText));
+        }
+    });
+
+    // if we never get off the ground:
+    req.addEventListener("error", function () {
+        callback(null, new Error("Network error"));
+    });
+
+    // Now send it:
+    req.send();
+}
+
+window.addEventListener('load', getRPubs);

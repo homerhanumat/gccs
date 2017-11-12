@@ -357,7 +357,35 @@ blockquote {
     background: #aff;
 }
 
+/********************************************
+*
+*  RPubs
+*
+*********************************************/
 
+#rpubs-articles {
+    max-width: 350px;
+    margin: 20px auto 0 auto;
+}
+
+div.post-title {
+    margin-bottom: 15px;
+}
+
+div.post-title a {
+    color: indigo;
+    text-decoration: none;
+    font-weight: 800;
+}
+
+div.post-title a.title-anchor {
+    font-size: 120%;
+}
+
+div.post-title a:hover,
+div.post-title a:focus {
+    text-decoration: underline;
+}
 
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
@@ -377,4 +405,6 @@ blockquote {
         border-bottom: 0;
     }
 }
+
+
 
