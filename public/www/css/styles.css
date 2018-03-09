@@ -1,0 +1,410 @@
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+body {
+    margin-bottom: 60px;
+}
+
+nav.navbar-fixed-top,
+nav.navbar-fixed-top ul.dropdown-menu {
+    background-color: rgb(255, 163, 26);
+}
+
+nav.navbar-fixed-top .container a {
+    color: white;
+}
+
+nav.navbar-fixed-top .container a:hover,
+nav.navbar-fixed-top .container a:focus {
+    color: rgb(80,80,80);
+}
+
+nav.navbar-fixed-top .container a.active {
+    background-color: #e7e7e7;
+    color: black;
+}
+
+
+.footer {
+    background-color: rgb(255, 163, 26);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    /* Set the fixed height of the footer here */
+    height: 60px;
+}
+
+.footer .container div a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer .container div a:hover,
+.footer .container div a:focus {
+    color: rgb(80,80,80);
+}
+
+
+.footer .container {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.footer .container div {
+    padding-top:1.5em;
+    flex: 1;
+}
+
+.footer .container div#department,
+.footer .container div#footer-email {
+    flex: 3;
+}
+
+.jumbotron {
+    background-image: url(../images/code.jpg);
+    color: white;
+    animation: movingBackground 20s linear 8s infinite alternate;
+}
+
+.jumbotron a.btn-success {
+    background-color: rgb(255, 163, 26);
+    font-size: 1em;
+    transition: 0.5s;
+}
+
+.jumbotron a.btn-success:hover,
+.jumbotron a.btn-success:focus {
+    background-color: rgb(204, 122, 0);
+    font-size: 1.05em;
+}
+
+.jumbotron h1 {
+    /*color: white;*/
+    color: #00CCFF;
+    animation: movingShadow 20s linear 8s infinite alternate;
+}
+
+@keyframes movingBackground {
+    from {
+        background-position: 0 0
+    }
+
+    to {
+        background-position: 0 100%;
+    }
+}
+
+@keyframes movingShadow {
+    from {
+        text-shadow: 0 0 0 white;
+    }
+
+    to {
+        text-shadow: 4px 4px 5px slategray;
+    }
+}
+
+@keyframes FadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+.jumbotron p.lead.index {
+    opacity: 0;
+    animation: FadeIn 3s ease 1s 1 normal forwards;
+}
+
+.jumbotron p a.index {
+    opacity: 0;
+    animation: FadeIn 3s ease 4s 1 normal forwards;
+}
+
+aside {
+    background-color: #aaffff;
+    border: solid 3px black;
+    padding: 10px;
+}
+
+aside ul {
+    list-style: none;
+    margin-left: 0;
+    padding: 0 10px 10px 10px;
+}
+
+aside li {
+    padding-bottom: 10px;
+}
+
+aside h3 {
+    text-align: center;
+    margin-top: 0;
+}
+
+img {
+    border: slategray solid 3px;
+    border-radius: 5px;
+}
+
+img.center {
+    display: block;
+    margin: 0 auto;
+}
+
+div.responsive-video {
+    position: relative;
+    width: 90%;
+    height: 0;
+    padding-bottom: 60%;
+    margin: 10px auto 10px auto;
+}
+
+
+div iframe {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border: solid slategray 10px;
+}
+
+
+
+/*****************************/
+
+/* Space out content a bit */
+body {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+/* Everything but the jumbotron gets side spacing for mobile first views */
+.header,
+.marketing {
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+/* Custom page header */
+.header {
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e5e5e5;
+}
+/* Make the masthead heading the same height as the navigation */
+.header h3 {
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 40px;
+}
+
+/******************************************************
+*
+* Icon grow on hover (experiment with footer email link only)
+* https://github.com/IanLunn/Hover
+*
+*******************************************************/
+
+/* Icon Pulse Grow */
+@-webkit-keyframes hvr-icon-pulse-grow {
+    to {
+        -webkit-transform: scale(1.6);
+        transform: scale(1.6);
+    }
+}
+@keyframes hvr-icon-pulse-grow {
+    to {
+        -webkit-transform: scale(1.6);
+        transform: scale(1.6);
+    }
+}
+footer.footer div.container div #hvr-icon-pulse-grow {
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    padding-right: 2.2em;
+}
+footer.footer div.container div #hvr-icon-pulse-grow:after {
+    content: "\2709";
+    position: absolute;
+    right: 1em;
+    font-size: 1.0em;
+    vertical-align: middle;
+    padding: 0 1px;
+    font-family: FontAwesome sans-serif;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+}
+footer.footer div.container div #hvr-icon-pulse-grow:hover:after,
+footer.footer div.container div #hvr-icon-pulse-grow:focus:after,
+footer.footer div.container div #hvr-icon-pulse-grow:active:after {
+    -webkit-animation-name: hvr-icon-pulse-grow;
+    animation-name: hvr-icon-pulse-grow;
+    -webkit-animation-duration: 0.6s;
+    animation-duration: 0.6s;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;
+    animation-direction: alternate;
+}
+
+
+/* Customize container */
+@media (min-width: 768px) {
+    .container {
+        max-width: 730px;
+    }
+}
+.container-narrow > hr {
+    margin: 30px 0;
+}
+
+/* Main marketing message and sign up button */
+.jumbotron {
+    text-align: center;
+    border-bottom: 1px solid #e5e5e5;
+}
+.jumbotron .btn {
+    padding: 14px 24px;
+    font-size: 21px;
+}
+
+/* Supporting marketing content */
+.marketing {
+    margin: 40px 0;
+}
+.marketing p + h4 {
+    margin-top: 28px;
+}
+
+
+/********************************************
+*
+*  Random Quote
+*
+*********************************************/
+
+div.quotation {
+    background-color: #00CCFF;
+    border: solid slategray 2px;
+    border-radius: 20px;
+    margin-top: 40px;
+}
+
+div.quotation h2, div.quotation .quote-author {
+    display: block;
+    text-align: center;
+}
+
+blockquote {
+    border-left: none;
+}
+
+
+/********************************************
+*
+*  Blog
+*
+*********************************************/
+
+.blog-index-main .post a, .blog-index-side .post a,
+.postlist.events .post a {
+    color: indigo;
+    text-decoration: none;
+    font-weight: 800;
+}
+.blog-index-main a:hover, .blog-index-side a:hover,
+.blog-index-main a:focus, .blog-index-side a:focus,
+.postlist.events .post a:hover,
+.postlist.events .post a:focus {
+    text-decoration: underline;
+}
+
+
+.blog-index-main .date,
+.postlist.events .date {
+    color: #606868;
+    font-size: 80%;
+}
+
+.tag {
+    cursor: pointer;
+    color: #326;
+    font-size: 80%;
+    background: #eef;
+    padding: 0 2px;
+    border-radius: 4px;
+}
+
+.tag:hover { background: #ddf; }
+
+.tag.selected {
+    background: #cff;
+    color: #166;
+}
+
+.tag.selected:hover,
+.tag.selected:focus {
+    background: #aff;
+}
+
+/********************************************
+*
+*  RPubs
+*
+*********************************************/
+
+#rpubs-articles {
+    max-width: 350px;
+    margin: 20px auto 0 auto;
+}
+
+div.post-title {
+    margin-bottom: 15px;
+}
+
+div.post-title a {
+    color: indigo;
+    text-decoration: none;
+    font-weight: 800;
+}
+
+div.post-title a.title-anchor {
+    font-size: 120%;
+}
+
+div.post-title a:hover,
+div.post-title a:focus {
+    text-decoration: underline;
+}
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+    /* Remove the padding we set earlier */
+    .header,
+    .marketing,
+    .footer {
+        padding-right: 0;
+        padding-left: 0;
+    }
+    /* Space out the masthead */
+    .header {
+        margin-bottom: 30px;
+    }
+    /* Remove the bottom border on the jumbotron for visual effect */
+    .jumbotron {
+        border-bottom: 0;
+    }
+}
+
+
+
